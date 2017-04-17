@@ -1,7 +1,9 @@
+@import '_vars';
+
 body {
   margin: 0;
-  background-color: #333;
-  color: #fff
+  background-color: $primary-color;
+  color: $primary-text;
 }
 
 table.menu {
@@ -13,64 +15,67 @@ table.menu {
   border-right: 1px solid #555;
   border-bottom: 1px solid #555;
   border-bottom-right-radius: 6px;
-  background-color: #777;
+  background-color: $secondary-color;
   box-shadow: #000 0 0 15px;
-  font-family: 'Courier New', Courier, monospace
-}
-
-table.menu h1 {
-  margin: 0 10px;
-  font-size: 20px
-}
-
-table.menu td {
-  text-align: center
-}
-
-table.menu button {
-  width: 80%;
-  background-color: #ccf;
-  color: #111;
-  text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: normal;
-  font-size: 12px;
-  border: 1px solid #555;
-  transition: width 0.5s, background-color 0.5s;
-  border-radius: 3px
 
+  h1 {
+    margin: 0 10px;
+    font-size: 20px;
+  }
 
-}
+  td {
+    text-align: center;
+  }
 
-table.menu button:hover {
-  cursor: pointer;
-  background-color: #ddf;
-  width: 85%;
-  transition: width 0.5s, background-color 0.5s
-}
+  button {
+    width: 80%;
+    background-color: $tertiary-color;
+    color: #111;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-size: 12px;
+    border: 1px solid #555;
+    transition: width 0.5s, background-color 0.5s;
+    border-radius: 3px;
 
-table.menu button:active,
-table.menu button:focus {
-  outline: none
-}
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($tertiary-color, 5);
+      width: 85%;
+      transition: width 0.5s, background-color 0.5s;
+    }
 
-table.menu td.label {
-  width: 80px
-}
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
 
-table.menu td.label,
-table.menu td.result {
-  text-align: right
+  td {
+    &.content { text-align: right; }
+    &.label {
+      @extend .content;
+      width: 80px;
+    }
+    &.result {
+      @extend .content;
+    }
+  }
 }
 
 .clicky {
   position: absolute;
   border-radius: 50%;
-  background-color: #aaf;
+  background-color: $clicky-color;
   border: 1px solid #555;
-  box-shadow: #000 0 0 15px
-}
+  box-shadow: #000 0 0 15px;
 
-.clicky:hover {
-  cursor: pointer
+  &:hover {
+    background-color: lighten($clicky-color, 5);//#aaf;
+    border: 1px solid lighten(#555, 5);
+    box-shadow: red 0 0 15px;
+    cursor: pointer;
+  }
 }
