@@ -3,7 +3,7 @@
   "repository": "",
   "license": "GPL-3.0+",
   "scripts": {
-    "dev:scss": "./node_modules/.bin/node-sass sauce/style.scss --watch --output=comperiled --output-style=compressed --source-map=true",
+    "dev:scss": "./node_modules/.bin/node-sass sauce/style.scss --watch --output=comperiled/css --output-style=compressed --source-map=true",
     "dev:server": "./node_modules/.bin/live-server",
     "dev": "run-p build:css dev:*",
     "build:clean": "rm -rf comperiled",
