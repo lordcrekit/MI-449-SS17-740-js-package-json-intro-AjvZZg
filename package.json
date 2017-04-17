@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "repository": "",
+  "license": "GPL-3.0+",
+  "scripts": {
+    "dev:scss": "./node_modules/.bin/node-sass sauce/style.scss --watch --output=comperiled --output-style=compressed --source-map=true",
+    "dev:server": "./node_modules/.bin/live-server",
+    "dev": "run-p build:css dev:*",
+    "build:clean": "rm -rf comperiled",
+    "build:lintscss": "./node_modules/.bin/stylelint sauce/*.scss --config .stylelint",
+    "build:lintjs": "./node_modules/.bin/standard *.js",
+    "build:css": "./node_modules/.bin/node-sass sauce/style.scss --output=comperiled/css --output-style=compressed --source-map=true",
+    "build": "run-s build:*"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "standard": "^10.0.2",
+    "stylelint": "^7.10.1"
+  }
+}
