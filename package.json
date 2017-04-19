@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "repository": "",
+  "name": "MI-449-SS17-740-js-package-json-intro-AjvZZg",
+  "repository": "lordcrekit/MI-449-SS17-740-js-package-json-intro-AjvZZg",
   "license": "GPL-3.0+",
   "scripts": {
     "dev:scss": "./node_modules/.bin/node-sass sauce/style.scss --watch --output=comperiled/css --output-style=compressed --source-map=true",
@@ -10,7 +10,8 @@
     "build:lintscss": "./node_modules/.bin/stylelint sauce/*.scss --config .stylelint",
     "build:lintjs": "./node_modules/.bin/standard *.js",
     "build:css": "./node_modules/.bin/node-sass sauce/style.scss --output=comperiled/css --output-style=compressed --source-map=true",
-    "build": "run-s build:*"
+    "build": "run-s build:*",
+    "pushout": "yarn build && surge --project . --domain https://normanwi-kg-tgc7noax99ajvzzg.surge.sh/"
   },
   "devDependencies": {
     "live-server": "^1.2.0",

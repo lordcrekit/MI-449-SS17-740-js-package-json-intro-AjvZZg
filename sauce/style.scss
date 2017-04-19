@@ -55,10 +55,13 @@ table.menu {
 
   td {
     &.content { text-align: right; }
+
     &.label {
       @extend .content;
+
       width: 80px;
     }
+
     &.result {
       @extend .content;
     }
