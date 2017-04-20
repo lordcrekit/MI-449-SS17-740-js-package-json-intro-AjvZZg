@@ -6,20 +6,21 @@
     "dev:scss": "node-sass sauce/style.scss --watch --output=comperiled/css --output-style=compressed --source-map=true",
     "dev:server": "live-server",
     "dev": "run-p build:css dev:*",
-    "lint:lintscss": "stylelint sauce/*.scss --config .stylelint",
+    "lint:lintscss": "stylelint sauce/*.scss",
     "lint:lintjs": "standard *.js",
     "lint": "run-s lint:*",
     "build:clean": "rm -rf comperiled",
     "build:css": "node-sass sauce/style.scss --output=comperiled/css --output-style=compressed --source-map=true",
     "build": "run-s lint build:*",
     "deploy:push": "surge --project . --domain https://normanwi-kg-tgc7noax99ajvzzg.surge.sh/",
-    "deploy": "run-s build deploy:*"  
+    "deploy": "run-s build deploy:*"
   },
   "devDependencies": {
     "live-server": "^1.2.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
     "standard": "^10.0.2",
-    "stylelint": "^7.10.1"
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
   }
 }
