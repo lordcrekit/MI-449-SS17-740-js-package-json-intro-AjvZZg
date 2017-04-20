@@ -6,6 +6,7 @@
     "dev:scss": "node-sass sauce/style.scss --watch --output=comperiled/css --output-style=compressed --source-map=true",
     "dev:server": "live-server",
     "dev": "run-p build:css dev:*",
+    "lint:html": "htmlhint *.html",
     "lint:lintscss": "stylelint sauce/*.scss",
     "lint:lintjs": "standard *.js",
     "lint": "run-s lint:*",
@@ -16,6 +17,7 @@
     "deploy": "run-s build deploy:*"
   },
   "devDependencies": {
+    "htmlhint": "^0.9.13",
     "live-server": "^1.2.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
